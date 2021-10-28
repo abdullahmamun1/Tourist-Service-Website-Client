@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import useAuth from '../../../../hooks/useAuth';
+import { HashLink } from 'react-router-hash-link';
 import './nav.css'
 
 const Nav = () => {
@@ -16,7 +17,7 @@ const Nav = () => {
                 </div>
                 <ul>
                     <li><Link to="/home">Home</Link></li>
-                    <li><Link to="/services">Services</Link></li>
+                    <li><HashLink smooth to="/home#services">Services</HashLink></li>
                     {user.email && <li><Link to="myOrders">My Orders</Link></li>}
                     {user.email && <li><Link to="/services/manage">Manage Orders</Link></li>}
                     {user.email && <li><Link to="/services/add">Add a Service</Link></li>}
