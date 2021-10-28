@@ -12,12 +12,14 @@ import AddService from './Components/AddService/AddService';
 import PlaceOrder from './Components/PlaceOrder/PlaceOrder';
 import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
 import AuthProvider from './contexts/AuthProvider';
+import Nav from './Components/Home/Header/Nav/Nav';
 
 function App() {
   return (
     <div>
       <AuthProvider>
         <Router>
+          <Nav></Nav>
           <Switch>
             <Route exact path="/">
               <Home></Home>

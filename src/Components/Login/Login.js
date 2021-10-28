@@ -1,6 +1,7 @@
 import React from 'react';
 import { useHistory, useLocation } from 'react-router';
 import useAuth from '../../hooks/useAuth';
+import './login.css'
 
 const Login = () => {
     const { signInUsingGoogle, setUser } = useAuth();
@@ -10,7 +11,7 @@ const Login = () => {
 
 
     const handleSignIn = () => {
-        signInUsingGoogle
+        signInUsingGoogle()
             .then((result) => {
                 setUser(result.user);
                 history.push(url)
@@ -20,9 +21,11 @@ const Login = () => {
 
     }
     return (
-        <div>
-            <h1>Please Login Here</h1>
-            <button onClick={handleSignIn}>Google Sign In</button>
+        <div className="login">
+            <div className="login-box">
+                <h1 className="text-4xl font-bold py-4">Please <span className="custom-color">Login</span> Here</h1>
+                <button className="custom-btn" onClick={handleSignIn}>Google Sign In</button>
+            </div>
         </div>
     );
 };
