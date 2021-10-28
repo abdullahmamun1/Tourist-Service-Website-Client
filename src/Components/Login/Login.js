@@ -4,7 +4,7 @@ import useAuth from '../../hooks/useAuth';
 import './login.css'
 
 const Login = () => {
-    const { signInUsingGoogle, setUser } = useAuth();
+    const { signInUsingGoogle, setUser, setIsLoading } = useAuth();
     const history = useHistory();
     const location = useLocation();
     const url = location.state?.from || '/home'
@@ -15,9 +15,11 @@ const Login = () => {
             .then((result) => {
                 setUser(result.user);
                 history.push(url)
-            }).catch((error) => {
+            })
+            .catch((error) => {
                 console.log(error.message);
-            });
+            })
+            .finally(() => { setIsLoading(false) });
 
     }
     return (
