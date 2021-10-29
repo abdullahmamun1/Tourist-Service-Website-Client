@@ -2,9 +2,12 @@
     display: flex;
     justify-content: center;
     margin-top: 100px;
+    background-color: aliceblue;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;;
 }
 .about-content{
     width: 80%;
+    
 }
 
 .about-image{
