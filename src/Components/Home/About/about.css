@@ -1,0 +1,48 @@
+.about{
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+}
+.about-content{
+    width: 80%;
+}
+
+.about-image{
+    display: flex;
+    justify-content: center;
+}
+.about-image img{
+    width: 50%;
+}
+
+.about-text p{
+    width: 100%;
+    text-align: center;
+    line-height: 40px;
+}
+
+@media only screen and (min-width: 600px) {
+    .about-text p{
+        width: 70%;
+    }
+    
+    .about-text{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }}
+    
+@media only screen and (max-width: 600px) {
+    
+    .about-image img{
+        width: 100%;
+    }
+    .about-text {
+        text-align: center;
+        width: 100%;
+        
+    }
+    .about-text p{
+        margin-bottom: 80px;
+    }
+}
+    
