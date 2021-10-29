@@ -55,3 +55,20 @@ nav ul li a:hover::after{
     background-color: #2483e1;
 
 }
+
+@media only screen and (max-width: 600px){
+    nav {
+        flex-direction: column;
+    }
+    .logo{
+        margin-bottom: 10px;
+    }
+    nav ul {
+        flex-direction: column;
+    }
+    nav ul li {
+        text-align: center;
+        margin: 5px auto;
+    }
+}
+    

@@ -9,7 +9,7 @@ const Nav = () => {
     return (
         <div className="nav">
             <nav>
-                <div>
+                <div className="logo">
                     <Link to="/home">
                         <p className="leading-3 px-2 py-2
                      custom-border"><span className="font-bold text-2xl custom-color">Smart</span> <br /> Delivery</p>
