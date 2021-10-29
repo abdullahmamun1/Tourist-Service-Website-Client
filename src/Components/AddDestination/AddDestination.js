@@ -9,6 +9,7 @@ const AddDestination = () => {
         axios.post('https://secret-meadow-63118.herokuapp.com/destinations', data)
             .then(res => {
                 if (res.data.insertedId) {
+                    console.log(res.data);
                     alert('New Destination added');
                     reset();
                 }
@@ -26,7 +27,7 @@ const AddDestination = () => {
             <div className="add-form">
                 <form onSubmit={handleSubmit(onSubmit)}>
                     <input className="custom-border p-1 mb-2" {...register("name", { required: true, maxLength: 20 })} placeholder="Destination Name" />
-                    <input className="custom-border p-1 mb-2" {...register("image")} placeholder="Image Url (check the url properly before submitting)" />
+                    <input className="custom-border p-1 mb-2" {...register("img")} placeholder="Image Url (check the url properly before submitting)" />
                     <textarea className="custom-border p-1 mb-2" {...register("description")} placeholder="Description" />
 
 
