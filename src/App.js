@@ -6,9 +6,9 @@ import {
 } from "react-router-dom";
 import Home from './Components/Home/Home';
 import MyOrders from './Components/MyOrders/MyOrders';
-import ManageAllServices from './Components/ManageAllServices/ManageAllServices';
+import ManageAllOrders from './Components/ManageAllOrders/ManageAllOrders';
 import Login from './Components/Login/Login';
-import AddService from './Components/AddService/AddService';
+import AddDestination from './Components/AddDestination/AddDestination';
 import PlaceOrder from './Components/PlaceOrder/PlaceOrder';
 import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
 import AuthProvider from './contexts/AuthProvider';
@@ -31,13 +31,13 @@ function App() {
             <Route path="/myOrders">
               <MyOrders></MyOrders>
             </Route>
-            <Route path="/services/add">
-              <AddService></AddService>
+            <Route path="/destinations/add">
+              <AddDestination></AddDestination>
             </Route>
-            <Route path="/services/manage">
-              <ManageAllServices></ManageAllServices>
+            <Route path="/orders/manage">
+              <ManageAllOrders></ManageAllOrders>
             </Route>
-            <PrivateRoute path="/services/:id">
+            <PrivateRoute path="/destinations/:id">
               <PlaceOrder></PlaceOrder>
             </PrivateRoute>
             <Route path="/login">

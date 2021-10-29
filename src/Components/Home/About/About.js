@@ -14,13 +14,13 @@ const About = () => {
                 </div>
                 <div className="about-text ">
                     <div className="flex justify-center">
-                        <p className="items-center"><span className="custom-color text-3xl lg:text-5xl font-bold ">Our aim</span>is to promote sustainable tourism, serving as a link between our customers and their destination.We will provide an "exciting journey" that is safe and comfortable, based on empathic values through our business.</p>
+                        <p className="items-center hover:shadow-lg text-justify p-4"><span className=" custom-color text-3xl lg:text-5xl font-bold ">Our aim</span>is to promote sustainable tourism, serving as a link between our customers and their destination.We will provide an "exciting journey" that is safe and comfortable, based on empathic values through our business.</p>
                     </div>
                     <div className="flex justify-center">
-                        <p><span className="custom-color text-3xl lg:text-5xl font-bold "> We </span>contributes towards complete growth and development of a country: one, by bringing numerous economic value & benefits; and, second, helping in build country's brand value, image & identity. Tourism industry goes beyond attractive destinations, to being an important economic growth contributor.</p>
+                        <p className="items-center hover:shadow-lg text-justify p-4"><span className="custom-color text-3xl lg:text-5xl font-bold "> We </span>contributes towards complete growth and development of a country: one, by bringing numerous economic value and, second, helping in build country's brand value, and identity. Tourism industry goes beyond attractive destinations, to being an important economic growth contributor.</p>
                     </div>
                     <div className="flex justify-center">
-                        <p><span className="custom-color text-3xl lg:text-5xl font-bold">Our </span>workers works so hard so that they can help people to go to their destination safely. We work togther with customers and maintain safety and security We are smart tourist service., as we love to travel the world , we also want to see prople travel the world</p>
+                        <p className="items-center hover:shadow-lg p-4 "><span className="custom-color text-3xl lg:text-5xl font-bold">Our </span>workers works so hard so that they can help people to go to their destination safely. We work togther with customers and maintain safety and security We are smart tourist service., as we love to travel the world , we also want to see prople travel the world</p>
                     </div>
                 </div>
             </div>
