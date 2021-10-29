@@ -22,11 +22,11 @@ const Nav = () => {
                     <li><HashLink smooth to="/home#contact">Contact</HashLink></li>
                     {user.email && <li><Link to="/myOrders">My Orders</Link></li>}
                     {user.email && <li><Link to="/orders/manage">Manage Orders</Link></li>}
-                    {user.email && <li><Link to="/destinations/add">Add a Service</Link></li>}
+                    {user.email && <li><Link to="/destinations/add">Add a Destination</Link></li>}
                 </ul>
                 <div >
                     {user.email && <small className="display-name">{user.displayName}</small>}
-                    {user.email ? <button className="custom-btn" onClick={logOut}>Logout</button> : <Link className="custom-btn" style={{ "text-decoration": "none" }} to="/login">Login</Link>}
+                    {user.email ? <button className="custom-btn" onClick={logOut}>Logout</button> : <Link className="custom-btn" to="/login">Login</Link>}
                 </div>
 
             </nav>

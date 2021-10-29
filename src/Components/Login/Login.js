@@ -24,7 +24,7 @@ const Login = () => {
     }
     return (
         <div className="login">
-            <div className="login-box">
+            <div className="login-box hover:shadow-lg">
                 <h1 className="text-4xl font-bold py-4">Please <span className="custom-color">Login</span> Here</h1>
                 <button className="custom-btn" onClick={handleSignIn}>Google Sign In</button>
             </div>
