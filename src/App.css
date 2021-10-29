@@ -1,5 +1,7 @@
 *{
   font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
 }
 .App {
   text-align: center;
@@ -59,6 +61,9 @@
 
 .custom-color{
   color:#2483e1;
+}
+.custom-bg-color{
+  background-color:#2483e1;
 }
 .custom-border-color{
   border-color:#2483e1;

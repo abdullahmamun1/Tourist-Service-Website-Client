@@ -13,6 +13,7 @@ import PlaceOrder from './Components/PlaceOrder/PlaceOrder';
 import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
 import AuthProvider from './contexts/AuthProvider';
 import Nav from './Components/Home/Header/Nav/Nav';
+import Footer from './Components/Home/Footer/Footer';
 
 function App() {
   return (
@@ -43,6 +44,7 @@ function App() {
               <Login></Login>
             </Route>
           </Switch>
+          <Footer></Footer>
         </Router>
       </AuthProvider>
     </div>

@@ -10,10 +10,10 @@ const Nav = () => {
         <div className="nav">
             <nav>
                 <div className="logo">
-                    <Link to="/home">
+                    <HashLink smooth to="/home#home">
                         <p className="leading-3 px-2 py-2
                      custom-border"><span className="font-bold text-2xl custom-color">Smart</span> <br /> Delivery</p>
-                    </Link>
+                    </HashLink>
                 </div>
                 <ul>
                     <li><Link to="/home">Home</Link></li>
@@ -26,7 +26,7 @@ const Nav = () => {
                 </ul>
                 <div >
                     {user.email && <small className="display-name">{user.displayName}</small>}
-                    {user.email ? <button className="custom-btn" onClick={logOut}>Logout</button> : <Link className="custom-btn " style={{ "text-decoration": "none" }} to="/login">Login</Link>}
+                    {user.email ? <button className="custom-btn" onClick={logOut}>Logout</button> : <Link className="custom-btn" style={{ "text-decoration": "none" }} to="/login">Login</Link>}
                 </div>
 
             </nav>

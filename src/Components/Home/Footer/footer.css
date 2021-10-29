@@ -1,0 +1,12 @@
+.footer{
+    height: 350px;
+    padding: 20px 50px;
+
+}
+
+@media only screen and (max-width: 600px){
+    .footer{
+        height: 500px;
+    }
+    
+}
