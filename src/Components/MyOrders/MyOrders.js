@@ -10,7 +10,7 @@ const MyOrders = () => {
 
 
     useEffect(() => {
-        const url = `http://localhost:5000/orders/${userId}`
+        const url = `https://secret-meadow-63118.herokuapp.com/orders/${userId}`
         fetch(url)
             .then(res => res.json())
             .then(data => {
