@@ -19,7 +19,7 @@ const Footer = () => {
                     <h1 className="text-3xl font-semibold text-white">Quick Links</h1>
                     <div className="ml-2 mt-2">
                         <HashLink to="/home#about" smooth className="hover:text-blue-700">About</HashLink><br />
-                        <HashLink to="/home#destinations" smooth className="hover:text-blue-700">Services</HashLink><br />
+                        <HashLink to="/home#destinations" smooth className="hover:text-blue-700">Destinations</HashLink><br />
                         <HashLink to="/home#contact" smooth className="hover:text-blue-700">Contact</HashLink>
                     </div>
                 </div>

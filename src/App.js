@@ -28,15 +28,15 @@ function App() {
             <Route path="/home">
               <Home></Home>
             </Route>
-            <PrivateRoute path="/orders/:userId">
+            <PrivateRoute path="/orders/">
               <MyOrders></MyOrders>
             </PrivateRoute>
-            <Route path="/destinations/add">
+            <PrivateRoute path="/destinations/add">
               <AddDestination></AddDestination>
-            </Route>
-            <Route path="/orders/manage">
+            </PrivateRoute>
+            <PrivateRoute exact path="/orders/manage">
               <ManageAllOrders></ManageAllOrders>
-            </Route>
+            </PrivateRoute>
             <PrivateRoute path="/destinations/:id">
               <PlaceOrder></PlaceOrder>
             </PrivateRoute>

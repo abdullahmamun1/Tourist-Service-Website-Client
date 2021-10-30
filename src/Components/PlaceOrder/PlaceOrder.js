@@ -27,7 +27,7 @@ const PlaceOrder = () => {
                     console.log(res);
                     alert('Your order has been completed successfully. Waiting to be approved');
                     reset();
-                    history.push(`/orders/${user.email}`)
+                    history.push(`/orders`)
                 }
             })
             .catch(error => {
@@ -58,7 +58,9 @@ const PlaceOrder = () => {
                 <form onSubmit={handleSubmit(onSubmit)}>
                     <input className="custom-border p-1 mb-2" {...register("username", { required: true, maxLength: 20 })} defaultValue={user.displayName} placeholder="Your Name" />
                     <input className="custom-border p-1 mb-2" {...register("email")} placeholder="Email Address" defaultValue={user.email} />
-                    <select className="custom-border w-3/5 p-1 mb-2" {...register("place")}><option>{destination.name}</option>
+                    <select className="custom-border w-3/5 p-1 mb-2" {...register("place")} placeholder="Please Select your destination" >
+                        <option value="" selected disabled>Please Select your destination</option>
+                        <option value={destination.name}>{destination.name}</option>
                     </select>
                     <input className="custom-border p-1 mb-2" {...register("address")} placeholder="Address" />
                     <input className="custom-border p-1 mb-2" type="number" {...register("duration")} placeholder="Tour Duration (in Days)" />
