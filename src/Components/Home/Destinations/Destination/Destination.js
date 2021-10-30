@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './destination.css'
 
 const Destination = ({ destination }) => {
@@ -13,7 +14,7 @@ const Destination = ({ destination }) => {
                 <p className="text-justify">{description}</p>
             </div>
             <div className="p-6 flex justify-center">
-                <button className="custom-btn">Book Now</button>
+                <Link to={`/destinations/${destination._id}`}><button className="custom-btn">Book Now</button></Link>
             </div>
         </div>
     );

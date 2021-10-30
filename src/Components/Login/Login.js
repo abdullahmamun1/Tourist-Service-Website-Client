@@ -4,17 +4,25 @@ import useAuth from '../../hooks/useAuth';
 import './login.css'
 
 const Login = () => {
-    const { signInUsingGoogle, setUser, setIsLoading } = useAuth();
+    const { signInUsingGoogle, user, setUser, setIsLoading } = useAuth();
     const history = useHistory();
     const location = useLocation();
     const url = location.state?.from || '/home'
+    console.log(url.pathname !== `/orders/${user.email}`);
 
 
     const handleSignIn = () => {
         signInUsingGoogle()
             .then((result) => {
                 setUser(result.user);
-                history.push(url)
+
+                if (url.pathname !== `/orders/${user.email}`) {
+                    history.push('/home')
+                }
+                else {
+                    history.push(url)
+                }
+
             })
             .catch((error) => {
                 console.log(error.message);

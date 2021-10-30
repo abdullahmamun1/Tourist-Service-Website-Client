@@ -20,7 +20,7 @@ const Nav = () => {
                     <li><HashLink smooth to="/home#about">About</HashLink></li>
                     <li><HashLink smooth to="/home#destinations">Destinations</HashLink></li>
                     <li><HashLink smooth to="/home#contact">Contact</HashLink></li>
-                    {user.email && <li><Link to="/myOrders">My Orders</Link></li>}
+                    {user.email && <li><Link to={`/orders/${user.email}`}>My Orders</Link></li>}
                     {user.email && <li><Link to="/orders/manage">Manage Orders</Link></li>}
                     {user.email && <li><Link to="/destinations/add">Add a Destination</Link></li>}
                 </ul>

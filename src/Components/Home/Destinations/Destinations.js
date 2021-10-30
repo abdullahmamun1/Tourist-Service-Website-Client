@@ -1,14 +1,9 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
+import useAuth from '../../../hooks/useAuth';
 import Destination from './Destination/Destination';
 
 const Destinations = () => {
-    const [destinations, setDestinations] = useState([])
-
-    useEffect(() => {
-        fetch('https://secret-meadow-63118.herokuapp.com/destinations')
-            .then(res => res.json())
-            .then(data => setDestinations(data))
-    }, [])
+    const { destinations } = useAuth();
     return (
         <div id="destinations" className="my-20 px-2">
             <div className="text-center mb-20 px-2">

@@ -9,6 +9,8 @@ initializeAuthentication();
 const useFirebase = () => {
     const [user, setUser] = useState({});
     const [isLoading, setIsLoading] = useState(true);
+    const [destinations, setDestinations] = useState([])
+
 
     const auth = getAuth();
 
@@ -25,6 +27,13 @@ const useFirebase = () => {
             setIsLoading(false);
         });
         return () => unsubscribed;
+    }, [])
+
+
+    useEffect(() => {
+        fetch('https://secret-meadow-63118.herokuapp.com/destinations')
+            .then(res => res.json())
+            .then(data => setDestinations(data))
     }, [])
 
 
@@ -51,6 +60,7 @@ const useFirebase = () => {
     return {
         signInUsingGoogle,
         user,
+        destinations,
         isLoading,
         setIsLoading,
         setUser,
