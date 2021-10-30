@@ -1,4 +1,3 @@
-import userEvent from '@testing-library/user-event';
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
@@ -20,8 +19,10 @@ const PlaceOrder = () => {
     }, [])
 
     const onSubmit = data => {
+        console.log(data);
         axios.post('https://secret-meadow-63118.herokuapp.com/orders', data)
             .then(res => {
+                console.log(res);
                 if (res.data.insertedId) {
                     alert('Your order has been completed successfully. Waiting to be approved');
                     reset();
@@ -54,15 +55,16 @@ const PlaceOrder = () => {
             </div>
             <div className="add-form">
                 <form onSubmit={handleSubmit(onSubmit)}>
-                    <input className="custom-border p-1 mb-2" {...register("username", { required: true, maxLength: 20 })} defaultValue={user.displayName} placeholder="Your Name" />
+                    <input className="custom-border p-1 mb-2" {...register("username")} defaultValue={user.displayName} placeholder="Your Name" />
                     <input className="custom-border p-1 mb-2" {...register("email")} placeholder="Email Address" defaultValue={user.email} />
-                    <select className="custom-border w-3/5 p-1 mb-2" {...register("place")} placeholder="Please Select your destination" >
+                    <select className="custom-border w-3/5 p-1 mb-2" {...register("place", { required: true })} placeholder="Please Select your destination" >
                         <option value="" selected disabled>Please Select your destination</option>
                         <option value={destination.name}>{destination.name}</option>
                     </select>
-                    <input className="custom-border p-1 mb-2" {...register("address")} placeholder="Address" />
-                    <input className="custom-border p-1 mb-2" type="number" {...register("duration")} placeholder="Tour Duration (in Days)" />
-                    <input className="custom-border p-1 mb-2" type="number" {...register("numberOfPerson")} placeholder="Total Person" />
+                    <input className="custom-border p-1 mb-2" {...register("address", { required: true })} placeholder="Address" />
+                    <input className="custom-border p-1 mb-2" type="number" {...register("duration", { required: true })} placeholder="Tour Duration (in Days)" />
+                    <input className="custom-border p-1 mb-2" type="number" {...register("numberOfPerson", { required: true })} placeholder="Total Person" />
+                    <input className=" p-1 mb-2" {...register("status")} defaultValue="Pending" readOnly />
 
 
 

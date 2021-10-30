@@ -7,7 +7,7 @@ import { faBasketballBall } from '@fortawesome/free-solid-svg-icons';
 
 const Footer = () => {
     return (
-        <footer className="text-center relative custom-bg-color">
+        <footer className="text-center relative custom-bg-color mt-20">
             <div className="lg:grid lg:grid-cols-3 items-center footer">
                 <div className="logo flex items-center justify-center ">
                     <HashLink smooth to="/home#home">

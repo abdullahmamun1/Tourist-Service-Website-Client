@@ -53,6 +53,7 @@ const MyOrders = () => {
                                     <p><span>Selected Place</span>: {order.place}</p>
                                     <p><span>Tour Duration</span>: {order.duration} Hours</p>
                                     <p><span>Total Person</span>: {order.numberOfPerson}</p>
+                                    <p><span>Status </span>: {order.status}</p>
                                 </div>
                                 <button className="custom-btn" onClick={() => handleDeleteOrder(order._id)}>Delete</button>
                             </div>
