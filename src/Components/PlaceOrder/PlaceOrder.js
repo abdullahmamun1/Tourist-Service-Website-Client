@@ -20,11 +20,9 @@ const PlaceOrder = () => {
     }, [])
 
     const onSubmit = data => {
-        console.log(data);
         axios.post('https://secret-meadow-63118.herokuapp.com/orders', data)
             .then(res => {
                 if (res.data.insertedId) {
-                    console.log(res);
                     alert('Your order has been completed successfully. Waiting to be approved');
                     reset();
                     history.push(`/orders`)

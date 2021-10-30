@@ -9,7 +9,6 @@ const AddDestination = () => {
         axios.post('https://secret-meadow-63118.herokuapp.com/destinations', data)
             .then(res => {
                 if (res.data.insertedId) {
-                    console.log(res.data);
                     alert('New Destination added');
                     reset();
                 }

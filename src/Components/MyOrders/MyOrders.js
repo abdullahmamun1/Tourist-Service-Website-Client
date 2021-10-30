@@ -21,7 +21,7 @@ const MyOrders = () => {
     const handleDeleteOrder = (id) => {
         const proceed = window.confirm('Do you want to delete this order?');
         if (proceed) {
-            fetch(`http://localhost:5000/orders/${id}`, {
+            fetch(`https://secret-meadow-63118.herokuapp.com/orders/${id}`, {
                 method: 'DELETE'
             })
                 .then(res => res.json())
