@@ -7,7 +7,7 @@ import './nav.css'
 const Nav = () => {
     const { user, logOut } = useAuth();
     return (
-        <div className="nav">
+        <div className="nav fixed bg-white w-full">
             <nav>
                 <div className="logo">
                     <HashLink smooth to="/home#home">
@@ -16,11 +16,11 @@ const Nav = () => {
                     </HashLink>
                 </div>
                 <ul>
-                    <li><Link to="/home">Home</Link></li>
+                    <li><HashLink smooth to="/home#home">Home</HashLink></li>
                     <li><HashLink smooth to="/home#about">About</HashLink></li>
                     <li><HashLink smooth to="/home#destinations">Destinations</HashLink></li>
                     <li><HashLink smooth to="/home#contact">Contact</HashLink></li>
-                    {user.email && <li><Link to={`/orders/${user.email}`}>My Orders</Link></li>}
+                    {user.email && <li><Link to={`/orders`}>My Orders</Link></li>}
                     {user.email && <li><Link to="/orders/manage">Manage Orders</Link></li>}
                     {user.email && <li><Link to="/destinations/add">Add a Destination</Link></li>}
                 </ul>

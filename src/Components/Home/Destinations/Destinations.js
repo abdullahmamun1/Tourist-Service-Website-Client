@@ -5,7 +5,7 @@ import Destination from './Destination/Destination';
 const Destinations = () => {
     const { destinations } = useAuth();
     return (
-        <div id="destinations" className="my-20 px-2">
+        <div id="destinations" className="my-20 pt-20">
             <div className="text-center mb-20 px-2">
                 <h1 className="lg:text-5xl text-5xl mb-2 font-bold  custom-color">Choose your destinations</h1>
                 <p>We are offering your some of the popular tourist countries. Choose your favourite one!</p>

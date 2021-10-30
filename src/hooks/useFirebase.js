@@ -10,6 +10,7 @@ const useFirebase = () => {
     const [user, setUser] = useState({});
     const [isLoading, setIsLoading] = useState(true);
     const [destinations, setDestinations] = useState([])
+    const [isPending, setIsPending] = useState(true);
 
 
     const auth = getAuth();
@@ -63,6 +64,8 @@ const useFirebase = () => {
         destinations,
         isLoading,
         setIsLoading,
+        isPending,
+        setIsPending,
         setUser,
         logOut
     };

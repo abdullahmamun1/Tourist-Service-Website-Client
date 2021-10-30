@@ -4,7 +4,7 @@ import { faPhone, faMapMarker, faAt } from '@fortawesome/free-solid-svg-icons'
 
 const Contact = () => {
     return (
-        <div id="contact" className="my-20">
+        <div id="contact" className="my-20 pt-20">
             <div className="text-center my-10">
                 <h1 className="custom-color text-5xl font-bold ">Contact Us</h1>
                 <p>Contact with us if you have any queries!</p>

@@ -3,7 +3,7 @@ import './banner.css';
 
 const Banner = () => {
     return (
-        <div className="banner" id="home">
+        <div className="#banner" id="home">
             <div className="banner-content lg:flex lg:items-center">
                 <div className="half-width">
                     <div>
