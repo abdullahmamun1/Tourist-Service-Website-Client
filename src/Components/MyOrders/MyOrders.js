@@ -19,7 +19,6 @@ const MyOrders = () => {
                 }
             })
     }, [])
-    console.log(orders);
     return (
         <div className="py-20 ">
             <div>
