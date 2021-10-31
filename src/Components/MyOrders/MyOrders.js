@@ -51,7 +51,7 @@ const MyOrders = () => {
                                     <h1><span>Email</span>: <small>{order.email}</small></h1>
                                     <p><span>Address</span>: {order.address}</p>
                                     <p><span>Selected Place</span>: {order.place}</p>
-                                    <p><span>Tour Duration</span>: {order.duration} Hours</p>
+                                    <p><span>Tour Duration</span>: {order.duration} Days</p>
                                     <p><span>Total Person</span>: {order.numberOfPerson}</p>
                                     <p><span>Status </span>: {order.status}</p>
                                 </div>
