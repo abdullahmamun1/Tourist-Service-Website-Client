@@ -54,6 +54,16 @@
   font-size: 16px;
   cursor: pointer;
 }
+.custom-danger-btn{
+  background-color: #e12424;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 21px;
+  margin: 0 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
 .custom-btn:hover{
   background-color: #3273b4;
   transition: 0.3s;

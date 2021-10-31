@@ -55,7 +55,7 @@ const MyOrders = () => {
                                     <p><span>Total Person</span>: {order.numberOfPerson}</p>
                                     <p><span>Status </span>: {order.status}</p>
                                 </div>
-                                <button className="custom-btn" onClick={() => handleDeleteOrder(order._id)}>Delete</button>
+                                <button className="custom-danger-btn shadow-md" onClick={() => handleDeleteOrder(order._id)}>Delete</button>
                             </div>
                         </div>)
                     }
