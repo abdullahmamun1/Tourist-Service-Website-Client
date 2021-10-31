@@ -10,6 +10,7 @@ const Login = () => {
     const url = location.state?.from || '/home'
 
 
+    // sign in handler
     const handleSignIn = () => {
         signInUsingGoogle()
             .then((result) => {

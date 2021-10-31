@@ -18,6 +18,7 @@ const MyOrders = () => {
     }, [])
 
 
+    // delete handler
     const handleDeleteOrder = (id) => {
         const proceed = window.confirm('Do you want to delete this order?');
         if (proceed) {

@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import { useLocation } from 'react-router';
+
+
 
 const ManageAllOrders = () => {
     const [orders, setOrders] = useState([]);
-    const location = useLocation();
 
     useEffect(() => {
         const url = `https://secret-meadow-63118.herokuapp.com/orders/`
@@ -15,6 +15,7 @@ const ManageAllOrders = () => {
     }, [])
 
 
+    //delete handler
     const handleDeleteOrder = (id) => {
         const proceed = window.confirm('Do you want to delete this order?');
         if (proceed) {
@@ -32,6 +33,7 @@ const ManageAllOrders = () => {
         }
     }
 
+    //update handler
     const handleUpdateOrder = (id) => {
         fetch(`https://secret-meadow-63118.herokuapp.com/orders/${id}`,
             {
@@ -69,7 +71,7 @@ const ManageAllOrders = () => {
                                     <p><span>Status</span>: {order.status}</p>
 
                                 </div>
-                                <div className="flex ">
+                                <div className="flex">
                                     <button className="custom-danger-btn " onClick={() => handleDeleteOrder(order._id)}>Delete</button>
                                     <button className="custom-btn" onClick={() => handleUpdateOrder(order._id)}>Update</button>
                                 </div>
