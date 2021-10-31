@@ -18,6 +18,8 @@ const PlaceOrder = () => {
             .then(data => setDestiantion(data))
     }, [])
 
+
+    // form submit handling
     const onSubmit = data => {
         console.log(data);
         axios.post('https://secret-meadow-63118.herokuapp.com/orders', data)
