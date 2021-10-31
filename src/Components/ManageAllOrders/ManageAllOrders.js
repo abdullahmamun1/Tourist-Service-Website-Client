@@ -33,7 +33,7 @@ const ManageAllOrders = () => {
     }
 
     const handleUpdateOrder = (id) => {
-        fetch(`http://localhost:5000/orders/${id}`,
+        fetch(`https://secret-meadow-63118.herokuapp.com/orders/${id}`,
             {
                 method: 'PUT',
                 headers: {
